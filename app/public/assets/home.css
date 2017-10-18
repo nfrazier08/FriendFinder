@@ -1,0 +1,39 @@
+.jumbotron{
+    width:960px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#fb{
+    width: 90x;
+    height: 90px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.text{
+    margin-left: 20px;
+    font-family: Georgia,Times,Times New Roman,serif; 
+}
+
+.header{
+    font-family: Georgia,Times,Times New Roman,serif; 
+}
+
+button{
+    margin-left: 20px;
+    margin-top:20px;
+}
+
+
+ul{
+    list-style-type: none;	
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+ul li{
+    display:inline;
+    
+}
+

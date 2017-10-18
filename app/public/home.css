@@ -1,0 +1,14 @@
+body {
+    background: blue;
+}
+
+.fb {
+    width:30px;
+    height:30px;
+   
+}
+
+.jumbotron {
+    width: 650px;
+    height:400px;
+}
