@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FriendFinderSurvey</title>
+        <!--Link for bootstrap-->        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/survey.css">
+<!-- create the js file (separate from server.js)
+create a routes file (separate from server.js - but required by server.js)
+potentially two routes files (homework suggests two - HTML and API Routes) 
+You'll have to create a ROUTE (app.get("the js file that will be for click events") { root "blah blah"}) - then link that path to the HTML file so it has a click event
+app.listen(process.env.PORT || 3000);HEROKU READY -->
+    </head>
+
+<body>
+<div class="container">
+
+    <!--Row for header-->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h1>Survey Questions</h1>
+            <hr>
+        </div>
+    </div>
+
+    <!--Row for questions-->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+                <h3>About You</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="formStyle">Name (Required):</label>
+                            <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                            <label for="name" class="formStyle">Link to Photo Image (Required):</label>
+                                <input type="text" class="form-control" id="photo">
+                    </div>                  
+                </form>
+            <hr>
+            <!--Dropdown Questions-->
+            <h3 class="questionTag">Question 1</h3>
+                <h3>It is often difficult for you to relate to other peoples feelings</h3>
+                <select data-placeholder="" class="chosen-select" id="q1">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+                    
+            <h3 class="questionTag">Question 2</h3>
+                <h3>I rarely get carried away by fantasies and ideas</h3>
+                <select data-placeholder="" class="chosen-select" id="q2">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+                
+            <h3 class="questionTag">Question 3</h3>
+                <h3>I feel more energetic after spending time with others</h3>
+                <select data-placeholder="" class="chosen-select" id="q3">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 4</h3>
+                <h3>I would much rather eat dinner at home than in a restaurant</h3>
+                <select data-placeholder="" class="chosen-select" id="q4">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 5</h3>
+                <h3>I enjoy cooking</h3>
+                <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 6</h3>
+                <h3>I don't like scary movies</h3>
+                <select data-placeholder="" class="chosen-select" id="q6">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 7</h3>
+                <h3>I enjoy solving crossword puzzles and games</h3>
+                <select data-placeholder="" class="chosen-select" id="q7">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 8</h3>
+                <h3>I am very open to trying new foods and different cultures</h3>
+                <select data-placeholder="" class="chosen-select" id="q8">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 9</h3>
+                <h3>My relationships with my friends are important to me</h3>
+                <select data-placeholder="" class="chosen-select" id="q9">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+            <h3 class="questionTag">Question 10</h3>
+                <h3>I believe there is more than one way to do something correctly</h3>
+                <select data-placeholder="" class="chosen-select" id="q10">
+                        <option value= "">Select One</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                </select>           
+        </div>
+    </div>
+
+    <!--Row for submit button-->
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" id="submitRow">
+            <button type="button" class="btn btn-primary btn-block" id="submitbtn">Submit
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>            
+        </div>
+    </div>
+    <hr>
+
+<!--Helpful Links-->
+<ul>
+    <li><a href="#">API Friends List ||</a></li>
+    <li><a href="#">GitHub Repo</a></li>
+</ul>
+
+</div> <!--End of the container-->
+       
+</body>
+</html>

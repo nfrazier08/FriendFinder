@@ -1,0 +1,34 @@
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
+    font-family: Georgia,Times,Times New Roman,serif; 
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.formStyle{
+    font-size: 20px;
+    font-family: Georgia,Times,Times New Roman,serif;
+}
+
+#submitRow{
+    margin-top: 20px;
+}
+
+#submitbtn{
+    padding:15px;
+}
+
+.questionTag{
+    font-weight:bold;
+}
+
+ul{
+    list-style-type: none;	
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+ul li{
+    display:inline;
+    
+}
+
