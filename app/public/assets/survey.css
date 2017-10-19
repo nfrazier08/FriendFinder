@@ -23,8 +23,8 @@
 
 ul{
     list-style-type: none;	
-    margin-left: 150px;
-    margin-top: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 ul li{

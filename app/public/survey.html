@@ -4,12 +4,11 @@
         <title>FriendFinderSurvey</title>
         <!--Link for bootstrap-->        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/survey.css">
-<!-- create the js file (separate from server.js)
-create a routes file (separate from server.js - but required by server.js)
-potentially two routes files (homework suggests two - HTML and API Routes) 
-You'll have to create a ROUTE (app.get("the js file that will be for click events") { root "blah blah"}) - then link that path to the HTML file so it has a click event
-app.listen(process.env.PORT || 3000);HEROKU READY -->
+        <link rel="stylesheet" type="text/css" href="./survey.css">
+        <!--Jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./clickFunctions"></script>
+     
     </head>
 
 <body>
@@ -32,11 +31,11 @@ app.listen(process.env.PORT || 3000);HEROKU READY -->
                 <form>
                     <div class="form-group">
                         <label for="name" class="formStyle">Name (Required):</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="nameInput">
                     </div>
                     <div class="form-group">
                             <label for="name" class="formStyle">Link to Photo Image (Required):</label>
-                                <input type="text" class="form-control" id="photo">
+                                <input type="text" class="form-control" id="photoLink">
                     </div>                  
                 </form>
             <hr>
@@ -157,7 +156,7 @@ app.listen(process.env.PORT || 3000);HEROKU READY -->
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8" id="submitRow">
-            <button type="button" class="btn btn-primary btn-block" id="submitbtn">Submit
+            <button type="button" class="btn btn-primary btn-block" id="submitbtn" href="/survey">Submit
                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </button>            
         </div>
@@ -165,23 +164,49 @@ app.listen(process.env.PORT || 3000);HEROKU READY -->
     <hr>
 
 <!--Helpful Links-->
-<ul>
-    <li><a href="#">API Friends List ||</a></li>
-    <li><a href="#">GitHub Repo</a></li>
-</ul>
+<!--Row for links-->
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <ul>
+            <li><a href=""/friendList"">API Friends List ||</a></li>
+            <li><a href="https://github.com/nfrazier08/FriendFinder" target="new">GitHub Repo</a></li>
+        </ul>
+    </div>
+</div>
+
 
 </div> <!--End of the container-->
 
        
 <!--script to handle click event, this will be moved to another file later, but for now, it's here-->
-<!--Jquery-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- 
 <script type="text/javascript">
-    
+    $("#submitbtn").on("click", function(){
+        event.preventDefault();
+      
+        var newFriend = {
+            name: $("#nameInput").val(),
+            photo: $("#photoLink").val(),
+            questionArray:[ $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]            
+                    }
+
+        console.log(newFriend);
+    })
 
 
-</script>
+</script> -->
        
 </body>
 </html>

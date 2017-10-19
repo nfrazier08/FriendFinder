@@ -1,8 +1,8 @@
-.jumbotron{
+/* .jumbotron{
     width:960px;
     height: 400px;
     margin: 0 auto;
-}
+} */
 
 #fb{
     width: 90x;
@@ -32,8 +32,8 @@ button{
 
 ul{
     list-style-type: none;	
-    margin-left: 250px;
-    margin-top: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 ul li{

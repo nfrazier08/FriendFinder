@@ -3,16 +3,34 @@
 // ===============================================================================
 var path = require("path");
 
+
 //Routes Needed:
-    //GET to survey
-    //A default, catch-all route that leads to home.html 
-    //When user "visits" a page
+    //When user "visits" a page, specifically the survey page
     //In each case, the user is shown an html page of the content
 
 module.exports = function(app){
-    //When a user visits the survey page
+    app.get("/", function(req, res){
+        res.sendFile("home.html", {root: "./app/public"})           
+    })
+
+    app.get("/home.css", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/assets/home.css"))
+    })
+
+    app.get("/survey.css", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/assets/survey.css"))
+    })
+
     app.get("/survey", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
+        res.sendFile(path.join(__dirname, "../public/survey.html"))
+    })
+
+    app.get("/friendList", function(req,res){
+        res.sendFile(path.join(__dirname, "../data/friendList.json"))
+    })
+
+    app.get("/clickFunctions", function(req, res){
+        res.sendFile(path.join(__dirname, "../data/clickFunctions.js"))
     })
 
     //A default, that throws the user to the home page

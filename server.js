@@ -16,8 +16,15 @@ app.use(bodyParser.json());
 //Router
 //Points server to a series of "route" files
 //Give server a "map" of how to respond when users visit or request data from various URLs
-// require("./routing/apiRoutes")(app);
-// require("./routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
+
+//STEP 1: I want to record the users answers to a survey and push them into an object
+    //THIS IS HANDLED IN THE CLICK EVENT ON THE SURVEY.HTML CLICK EVENT
+
+
+
+
 
 //Listener
 app.listen(PORT, function(){
