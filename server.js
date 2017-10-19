@@ -1,5 +1,25 @@
-// server.js file should require the basic npm packages class: `express`, `body-parser` and `path`.
+// Set of packages needed
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
+//Tells node that we are creating an "express" server
+var app = express();
+
+//Sets up initial port
+var PORT = process.env.PORT || 3000;
+
+//Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
+
+//Router
+//Points server to a series of "route" files
+//Give server a "map" of how to respond when users visit or request data from various URLs
+// require("./routing/apiRoutes")(app);
+// require("./routing/htmlRoutes")(app);
+
+//Listener
+app.listen(PORT, function(){
+    console.log("App is listening on PORT: " + PORT)
+})
