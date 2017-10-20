@@ -10,9 +10,15 @@
 
         //api means that I am handling logic and not sending something to the client
        app.post("/api/postFriend", function(req, res){
-            //req.body is our new posted friend from click function ajax
+            //req.body is our new posted friend from ajax request in click function
+            var newFreindToPost = req.body
+
+            //This is working, but not printing the exact response I need to use
+                //Troubleshoot this later
+            console.log(newFreindToPost)
             //take req.body and do compare logic
             //then store req.body
+
             //This will send a response
 
        })

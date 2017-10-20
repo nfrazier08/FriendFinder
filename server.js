@@ -19,12 +19,6 @@ app.use(bodyParser.json());
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
-//STEP 1: I want to record the users answers to a survey and push them into an object
-    //THIS IS HANDLED IN THE CLICK EVENT ON THE SURVEY.HTML CLICK EVENT
-
-
-
-
 
 //Listener
 app.listen(PORT, function(){

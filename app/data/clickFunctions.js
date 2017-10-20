@@ -22,27 +22,18 @@ $("#submitbtn").on("click", function(){
         console.log(newFriend);
 
         //AJAX here to GET newFriend object
+        //I BELIEVE THIS WORKS, GETTING AN ERROR WHEN RAN BECAUSE ITS NOT FINDING THE ROUTE URL, SO SET THAT UP
         $.ajax({
             type: "POST",
             //Route for app.POST in apiRoutes
-            url: "/api.postFriend",
+            url: "/api/postFriend",
             data: JSON.stringify(newFriend),
-            dataType: JSON,
-            success: function yourMatchModal(){
-                html += '<div>'
-            }
-            
-    });
-})
-
-//Code for the modal
-<div class="modal fade bs-example-modal-sm" id="wrongBoxColor" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                Uh-oh! Those colors don't match!
-            </div>
-        </div>
-    </div>
+            dataType: 'json',
+            success: function yourMatchModal(returnNewFriendObject){
+                console.log("Returned Object: " + `${returnNewFriendObject.name}` + `${returnNewFriendObject.photo}`)
+            }            
+        });
+    })
 
 
 //Click function to go to survey page
