@@ -2,13 +2,21 @@
     //GET routes with the url `api/friends` to display JSON of all possible friends
     //POST routes `/api/friends` to handle incoming survey results and compatibility logic
 
-    var surveyData = require("../data/friends");
-
     module.exports = function(app){
-        //This should be "getting" the survey data and handle the compatibility data
-        app.get("/api/friends", function(req, res){
-            res.json(surveyData);
-        });
+        //I want to get the newFriend object from the survey and write it to the friendList.json
+        app.get("api/readFriends", function(req, res){
+            res.sendFile(path.join(_dirname, "../data/friendList"))
+        })
+
+        //api means that I am handling logic and not sending something to the client
+       app.post("/api/postFriend", function(req, res){
+            //req.body is our new posted friend from click function ajax
+            //take req.body and do compare logic
+            //then store req.body
+            //This will send a response
+
+       })
+          
 
         //API POSTS
         //below code handles when a user submits a form and thus submits data to the server

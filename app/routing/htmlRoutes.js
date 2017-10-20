@@ -25,9 +25,9 @@ module.exports = function(app){
         res.sendFile(path.join(__dirname, "../public/survey.html"))
     })
 
-    app.get("/friendList", function(req,res){
-        res.sendFile(path.join(__dirname, "../data/friendList.json"))
-    })
+    // app.get("/friendList", function(req,res){
+    //     res.sendFile(path.join(__dirname, "../data/friendList.json"))
+    // })
 
     app.get("/clickFunctions", function(req, res){
         res.sendFile(path.join(__dirname, "../data/clickFunctions.js"))
