@@ -29,6 +29,7 @@ $("#submitbtn").on("click", function(){
             url: "/api/postFriend",
             data: JSON.stringify(newFriend),
             dataType: 'json',
+            contentType: 'application/json',
             success: function yourMatchModal(returnNewFriendObject){
                 console.log("Returned Object: " + `${returnNewFriendObject.name}` + `${returnNewFriendObject.photo}`)
             }            
