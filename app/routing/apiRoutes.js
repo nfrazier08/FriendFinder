@@ -21,15 +21,18 @@
 
         //api means that I am handling logic and not sending something to the client
         //I want to read the AJAX request and print the friend to the friendList.json file
-        
+
         app.post("/api/postFriend", function(req, res){
             //req.body is our new posted friend from ajax request in click function
-            var newFreindToPost = req.body;
-            console.log(newFreindToPost)
+            var newFriendToPost = req.body;
+            // console.log(newFreindToPost)
 
             //Using the exported function from the friendJS file, pass in the newFriendToPost object
-            friendJS.writeFileAndPushFriendObject(newFreindToPost);
+            var getFriend = friendJS.writeFileAndPushFriendObject(newFriendToPost);
             
-            res.json(newFreindToPost);            
-    })
+            // //getFriend is Undefined...WHY????
+            // console.log(getFriend);
+            // res.json(getFriend);     
+            // res.end();       
+        })
 }

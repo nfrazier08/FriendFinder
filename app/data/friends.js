@@ -10,13 +10,14 @@
 function writeFileAndPushFriendObject(newFriendToPost){
     //push new friend to post into friendList.json file
     friendList.push(newFriendToPost);
+    console.log(newFriendToPost);
 
     //using file system write to the json file
-    fs.appendFile("../data/friendList.json", JSON.stringify(newFriendToPost), 
+    fs.writeFile(".app/data/friendList.json", JSON.stringify(newFriendToPost), 
     function(err,data){
         if(err){
             console.log(err);
-        } console.log ("friendList.json updated");    
+        } console.log ("friendList.json updated");            
     })
 }
 
