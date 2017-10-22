@@ -21,6 +21,7 @@
 
         //api means that I am handling logic and not sending something to the client
         //I want to read the AJAX request and print the friend to the friendList.json file
+        
         app.post("/api/postFriend", function(req, res){
             //req.body is our new posted friend from ajax request in click function
             var newFreindToPost = req.body;
