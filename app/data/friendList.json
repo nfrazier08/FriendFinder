@@ -1,1 +1,114 @@
-[{"name":"jimi","photo":"jimi","questionArray":["2","3","2","3","2","3","2","3","2","3"]},{"name":"jimi","photo":"jimi","questionArray":["2","3","2","3","2","3","2","3","2","3"]},{"name":"kelsey","photo":"phot.com","questionArray":["5","3","2","3","2","3","2","3","4","3"]}]
+[
+	{
+		"name": "Mrs. Potts",
+		"photo": "https://vignette.wikia.nocookie.net/kingdomhearts/images/3/3b/Mrs._Potts_KHX.png/revision/latest?cb=20151107215720",
+		"questionArray": [
+			5,
+			4,
+			3,
+			2,
+			3,
+			4,
+			3,
+			2,
+			1,
+			1
+		]
+	},
+	{
+		"name": "Drake",
+		"photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Drake-Velvet-Underground.png/240px-Drake-Velvet-Underground.png",
+		"questionArray": [
+			2,
+			1,
+			2,
+			1,
+			2,
+			3,
+			4,
+			3,
+			2,
+			4
+		]
+	},
+	{
+		"name": "President Garfield",
+		"photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg/1200px-James_Abram_Garfield%2C_photo_portrait_seated.jpg",
+		"questionArray": [
+			2,
+			1,
+			2,
+			3,
+			3,
+			3,
+			4,
+			3,
+			4,
+			5
+		]
+	},
+	{
+		"name": "Danzig",
+		"photo": "http://img.wennermedia.com/social/rs-200755-GD-PB0903cropsm.jpg",
+		"questionArray": [
+			5,
+			5,
+			5,
+			4,
+			4,
+			5,
+			4,
+			5,
+			4,
+			1
+		]
+	},
+	{
+		"name": "Maya Angelou",
+		"photo": "data:image/jpeg;base64,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",
+		"questionArray": [
+			4,
+			4,
+			4,
+			3,
+			4,
+			3,
+			4,
+			1,
+			1,
+			1
+		]
+	},
+	{
+		"name": "Dr. Preston Burke",
+		"photo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Preston_Burke.jpg/220px-Preston_Burke.jpg",
+		"questionArray": [
+			2,
+			2,
+			2,
+			3,
+			2,
+			3,
+			2,
+			1,
+			5,
+			3
+		]
+	},
+	{
+		"name": "Frederick Douglass",
+		"photo": "https://www.biography.com/.image/c_fill%2Ccs_srgb%2Cg_face%2Ch_170%2Cq_80%2Cw_300/MTQ1Mjk5NjU0MTU2NzU2Mzc2/frederick-douglass---mini-biography.jpg",
+		"questionArray": [
+			3,
+			3,
+			4,
+			3,
+			4,
+			5,
+			5,
+			4,
+			3,
+			2
+		]
+	}
+]

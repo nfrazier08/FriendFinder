@@ -9,13 +9,18 @@
     console.log(friendList);
 
 function writeFileAndPushFriendObject(newFriendToPost){
-    console.log(newFriendToPost); 
+    // console.log(newFriendToPost); 
+    //Convert user array into integer with loop
+    for(var i = 0; i < newFriendToPost.questionArray.length; i++){
+        newFriendToPost.questionArray[i] = parseInt(newFriendToPost.questionArray[i]);
+    }
+
     //push new friend to post into friendList.json file 
     friendList.push(newFriendToPost);
     
     //using file system write to the json file
 
-    fs.writeFile("./app/data/friendList.json", JSON.stringify(friendList, null, 2), 
+    fs.writeFile("./app/data/friendList.json", JSON.stringify(friendList, null, "\t"), 
     function(err,data){
         if(err){
             console.log(err);
@@ -24,6 +29,21 @@ function writeFileAndPushFriendObject(newFriendToPost){
         }
     })
 }
+
+//Logic for determining who is the best match
+function bestMatch(){
+    //convert user results into array of numbers
+    var integerComparison =[];
+
+
+
+}
+
+
+
+
+
+
 
 module.exports = {
     writeFileAndPushFriendObject: writeFileAndPushFriendObject
