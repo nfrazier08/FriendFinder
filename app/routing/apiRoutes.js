@@ -15,9 +15,11 @@
 
     module.exports = function(app){
         //I want to read the friendList.json file (where the friends are printed) with the api/readFriendList pathway
-        app.get("api/readFriendList", function(req, res){
-            res.sendFile("friendList.json", {root: "../data"})
+        app.get("/api/readFriendList", function(req, res){
+            res.sendFile("friendList.json", {root: "./app/data"})
         })
+
+        
 
         //api means that I am handling logic and not sending something to the client
         //I want to read the AJAX request and print the friend to the friendList.json file

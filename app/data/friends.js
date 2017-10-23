@@ -5,22 +5,23 @@
     var fs = require("fs");
 
 //Require in friendList.json file
-    var friendList = require("./friendList.json")
+    var friendList = require("./friendList.json");
+    console.log(friendList);
 
 function writeFileAndPushFriendObject(newFriendToPost){
     console.log(newFriendToPost); 
+    //push new friend to post into friendList.json file 
+    friendList.push(newFriendToPost);
     
     //using file system write to the json file
-    fs.writeFile("./app/data/friendList.json", JSON.stringify(newFriendToPost), 
+
+    fs.writeFile("./app/data/friendList.json", JSON.stringify(friendList, null, 2), 
     function(err,data){
         if(err){
             console.log(err);
+        } else { 
+          console.log ("friendList.json updated");
         }
-             
-         //push new friend to post into friendList.json file 
-         friendList.push(newFriendToPost);
-                
-         console.log ("friendList.json updated");
     })
 }
 
