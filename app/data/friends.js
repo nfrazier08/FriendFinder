@@ -31,29 +31,16 @@ function writeFileAndPushFriendObject(newFriendToPost){
 
 //YOU WILL NEED TO FIND THE MIN OF ALL THE SCORES ARRAY
 
-function compareAnswerArrays(newFriendToPost, existingFriends){
-    var storedComparisonScoresArray = [];
-
-    //store current user question array in a variable
-    for (var i = 0; newFriendToPost.questionArray.length;i++){
-        var currentUserArray = newFriendToPost.questionArray[i];
+function checkSumofCurrentUserQuestions(newFriendToPost){
+    var sum = 0;
+    for(var i= 0; i < newFriendToPost.questionArray.length; i++){
+        sum = sum + newFriendToPost.questionArray[i];
     }
-
-    //store each of the friends answers in a variable
-    for (var m = 0; m < friendList.length; m++){
-        var eachFriendListAnswers = friendList[i].questionArray
-    }
-
-    var indexToCheck = Math.abs(currentUserArray - eachFriendListAnswers)
-    storedComparisonScoresArray.push(indexToCheck);
-    console.log(storedComparisonScoresArray);
+    console.log(sum)
 }
 
 
-
-
-
-
 module.exports = {
-    writeFileAndPushFriendObject: writeFileAndPushFriendObject
+    writeFileAndPushFriendObject: writeFileAndPushFriendObject,
+    checkSumofCurrentUserQuestions: checkSumofCurrentUserQuestions
 };

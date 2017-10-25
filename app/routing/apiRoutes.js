@@ -30,10 +30,12 @@
             var newFriendToPost = req.body;
             // console.log(newFreindToPost)
 
-           var getFriend = friendJS.writeFileAndPushFriendObject(newFriendToPost);
+           friendJS.writeFileAndPushFriendObject(newFriendToPost);
 
-            //Using the exported function from the friendJS file, pass in the newFriendToPost object
-            // compareAnswerArrays(newFriendToPost, friendList);
+           //checking to see if sum function works- This works!!!
+           console.log("*****");
+           friendJS.checkSumofCurrentUserQuestions(newFriendToPost);
+    
 
             res.json();     
             res.end();       

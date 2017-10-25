@@ -112,11 +112,26 @@
 		]
 	},
 	{
-		"name": "Marie Antoinette",
-		"photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marie_Antoinette_Adult.jpg/330px-Marie_Antoinette_Adult.jpg",
+		"name": "spiderman",
+		"photo": "https://heroichollywood.b-cdn.net/wp-content/uploads/2017/06/Spider-Man-Game.jpg?x42694",
 		"questionArray": [
 			5,
 			4,
+			3,
+			5,
+			4,
+			3,
+			4,
+			3,
+			4,
+			3
+		]
+	},
+	{
+		"name": "Wonder Woman",
+		"photo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Wonder_Woman.jpg/250px-Wonder_Woman.jpg",
+		"questionArray": [
+			2,
 			1,
 			2,
 			1,
@@ -124,7 +139,8 @@
 			3,
 			2,
 			3,
-			2
+			2,
+			1
 		]
 	}
 ]
