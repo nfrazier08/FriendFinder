@@ -32,10 +32,10 @@ $("#submitbtn").on("click", function(){
             data: JSON.stringify(newFriend),
             dataType: 'json',
             contentType: 'application/json',
-            success: function yourMatchModal(returnNewFriendObject){
-                // console.log("Returned Object: " + `${returnNewFriendObject.name}` + `${returnNewFriendObject.photo}`)
-                console.log(newFriend)
-            }            
+            success: function(assignedFriend){
+                console.log(assignedFriend)
+            }
+            
         });
     })
 

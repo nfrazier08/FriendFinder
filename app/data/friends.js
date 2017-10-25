@@ -29,18 +29,43 @@ function writeFileAndPushFriendObject(newFriendToPost){
     })    
 }
 
-//YOU WILL NEED TO FIND THE MIN OF ALL THE SCORES ARRAY
 
-function checkSumofCurrentUserQuestions(newFriendToPost){
-    var sum = 0;
+//This function does the subtracting the two answer arrays and grabs the absolute value
+function getDiffFromFriend(newFriendToPost, oneFriend){
+    var diff = 0;
+
+    //Run through answer array of newFriend
     for(var i= 0; i < newFriendToPost.questionArray.length; i++){
-        sum = sum + newFriendToPost.questionArray[i];
+        //set diff to: eachFriend answer array length MINUS the answer array of each friend in list at [i]
+        var eachFriendDiff = Math.abs(newFriendToPost.questionArray[i] - oneFriend.questionArray[i])
+        diff += eachFriendDiff;
     }
-    console.log(sum)
+    return diff;
+}
+
+
+//This function passes in each friend in the friend list for the eachFriend variable to find a match
+function findFriendWithLowestDifference(newFriendToPost){
+    var friendToReturn = {};
+    var currentLowestDiff = 999;
+
+    //use for loop to run through each friend in list
+    for(var i = 0; i < friendList.length; i++){
+        
+        var totalFriendDiff = getDiffFromFriend(newFriendToPost, friendList[i]);
+        console.log(totalFriendDiff);         
+
+        if(totalFriendDiff < currentLowestDiff){
+            currentLowestDiff = totalFriendDiff;
+            friendToReturn = friendList[i]
+        }
+    } 
+    console.log(friendToReturn);
+    return friendToReturn;    
 }
 
 
 module.exports = {
     writeFileAndPushFriendObject: writeFileAndPushFriendObject,
-    checkSumofCurrentUserQuestions: checkSumofCurrentUserQuestions
+    findFriendWithLowestDifference: findFriendWithLowestDifference
 };

@@ -30,14 +30,11 @@
             var newFriendToPost = req.body;
             // console.log(newFreindToPost)
 
+           var assignedFriend = friendJS.findFriendWithLowestDifference(newFriendToPost);
+
            friendJS.writeFileAndPushFriendObject(newFriendToPost);
 
-           //checking to see if sum function works- This works!!!
-           console.log("*****");
-           friendJS.checkSumofCurrentUserQuestions(newFriendToPost);
-    
-
-            res.json();     
+            res.json(assignedFriend);     
             res.end();       
         })
 }
