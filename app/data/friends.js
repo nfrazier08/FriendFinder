@@ -6,7 +6,7 @@
 
 //Require in friendList.json file
     var friendList = require("./friendList.json");
-    console.log(friendList);
+    // console.log(friendList);
 
 function writeFileAndPushFriendObject(newFriendToPost){
     // console.log(newFriendToPost); 
@@ -19,7 +19,6 @@ function writeFileAndPushFriendObject(newFriendToPost){
     friendList.push(newFriendToPost);
     
     //using file system write to the json file
-
     fs.writeFile("./app/data/friendList.json", JSON.stringify(friendList, null, "\t"), 
     function(err,data){
         if(err){
@@ -27,18 +26,28 @@ function writeFileAndPushFriendObject(newFriendToPost){
         } else { 
           console.log ("friendList.json updated");
         }
-    })
+    })    
 }
 
-//Logic for determining who is the best match
-function bestMatch(){
-    //convert user results into array of numbers
-    var integerComparison =[];
+//YOU WILL NEED TO FIND THE MIN OF ALL THE SCORES ARRAY
 
+function compareAnswerArrays(newFriendToPost, existingFriends){
+    var storedComparisonScoresArray = [];
 
+    //store current user question array in a variable
+    for (var i = 0; newFriendToPost.questionArray.length;i++){
+        var currentUserArray = newFriendToPost.questionArray[i];
+    }
 
+    //store each of the friends answers in a variable
+    for (var m = 0; m < friendList.length; m++){
+        var eachFriendListAnswers = friendList[i].questionArray
+    }
+
+    var indexToCheck = Math.abs(currentUserArray - eachFriendListAnswers)
+    storedComparisonScoresArray.push(indexToCheck);
+    console.log(storedComparisonScoresArray);
 }
-
 
 
 

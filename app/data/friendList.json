@@ -110,5 +110,21 @@
 			3,
 			2
 		]
+	},
+	{
+		"name": "Marie Antoinette",
+		"photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marie_Antoinette_Adult.jpg/330px-Marie_Antoinette_Adult.jpg",
+		"questionArray": [
+			5,
+			4,
+			1,
+			2,
+			1,
+			2,
+			3,
+			2,
+			3,
+			2
+		]
 	}
 ]

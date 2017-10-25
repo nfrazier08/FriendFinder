@@ -8,6 +8,7 @@
     //These data sources hold an array of new friend information
     //This should be reading  the friendList.json filev;rs
     var friendList = require("../data/friendList.json");
+    
 
 //Routes Needed:
     //GET routes with the url `api/friends` to display JSON of all possible friends
@@ -29,12 +30,12 @@
             var newFriendToPost = req.body;
             // console.log(newFreindToPost)
 
+           var getFriend = friendJS.writeFileAndPushFriendObject(newFriendToPost);
+
             //Using the exported function from the friendJS file, pass in the newFriendToPost object
-            var getFriend = friendJS.writeFileAndPushFriendObject(newFriendToPost);
-            
-            // //getFriend is Undefined...WHY????
-            // console.log(getFriend);
-            // res.json(getFriend);     
-            // res.end();       
+            // compareAnswerArrays(newFriendToPost, friendList);
+
+            res.json();     
+            res.end();       
         })
 }
