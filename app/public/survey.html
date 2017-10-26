@@ -4,9 +4,10 @@
         <title>FriendFinderSurvey</title>
         <!--Link for bootstrap-->        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./survey.css">
-        <!--Jquery-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./survey.css">        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="./clickFunctions"></script>
      
     </head>
@@ -174,12 +175,17 @@
         </ul>
     </div>
 </div>
-
-
 </div> <!--End of the container-->
 
- 
-
-       
-</body>
+<!--This is the modal-->
+<div class="modal fade bs-example-modal-sm text-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <h2 id="nameOfFriend"></h2>
+            <img id="matchedPhoto">
+        </div>
+    </div>
+</div>
+      
+    </body>
 </html>

@@ -32,3 +32,12 @@ ul li{
     
 }
 
+#myModal{
+    padding:15px;
+}
+
+#matchedPhoto {
+    height:250px;
+    width: 200px;
+    margin-bottom: 10px;
+}
